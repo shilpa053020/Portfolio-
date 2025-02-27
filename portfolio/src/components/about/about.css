@@ -1,0 +1,61 @@
+.about {
+    min-height: calc(100vh - 4rem); /* Ensures proper spacing */
+    width: 100%;
+    max-width: 90rem; /* Keeps the section from stretching too wide */
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row; /* Places image and text side by side */
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px; /* Ensures content is not too wide */
+    margin: 0 auto;
+    gap: 50px; /* Adds spacing between image and text */
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+.about__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.about__text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: left;
+    padding: 0 20px;
+    max-width: 600px; /* Ensures readability and prevents wide text */
+    color: #ddd;
+}
+
+.about__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .about__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about__text {
+        text-align: justify;
+        max-width: 90%;
+    }
+}
